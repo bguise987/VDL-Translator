@@ -4,7 +4,8 @@ Desktop software that translates data collected by the Vibration Data Logger at 
 Please note that this is old code, so while I would absolutely change it if I still used it, I can't justify the time (also I don't currently own a copy of the device, so that makes testing any modifications tough).
 
 That said, I'm still pretty proud of it. At the time we had a few scattered copies of C# and MATLAB code and it was unclear which copies worked or were even accurate. The most complete copy was in MATLAB and took 8+ hours to translate a data set on a Xeon workstation (in fact, it took so long we killed it). This Java code translated the same data set on a 2010 Macbook Pro in under 3 minutes.
-Fun fact: Why did the MATLAB version take so long? This code requires lots of bitwise operations due to how the data logger stored its data.
+
+Fun fact: Why did the MATLAB version take so long? This code requires lots of bitwise operations due to how the data logger stored its data. Through writing this I came to learn that bitwise operations are faster in Java than in MATLAB (although since 2014 this may not be true anymore).
 
 Some possible improvements:
 - Better separate the GUI and processing code. Currently these are too intermingled.
